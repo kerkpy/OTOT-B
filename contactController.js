@@ -20,7 +20,7 @@ exports.index = function (req, res) {
 // Handle create contact actions
 exports.new = function (req, res) {
     var contact = new Contact();
-    if (req.body.email == null || req.body.phone == null) {
+    if (!req.body.hasOwnProperty('phone') || !req.body.hasOwnProperty('email')) {
         req.json({
             message: 'Email and Phone should not be empty!',
             data: contact
