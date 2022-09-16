@@ -21,7 +21,7 @@ exports.index = function (req, res) {
 exports.new = function (req, res) {
     var contact = new Contact();
     if (!req.body.hasOwnProperty('phone') || !req.body.hasOwnProperty('email')) {
-        req.json({
+        res.json({
             message: 'Email and Phone should not be empty!',
             data: contact
         })
