@@ -14,7 +14,7 @@ var contactController = require('./contactController');
 router.route('/contacts')
     .get(contactController.index)
     .post(contactController.new);
-router.route('/contacts/:contact_id')
+router.route('/contacts/:name')
     .get(contactController.view)
     .patch(contactController.update)
     .put(contactController.update)

@@ -41,3 +41,5 @@ app.all('*', (req, res) => {
 app.listen(port, function () {
     console.log("Running RestHub on port " + port);
 });
+
+module.exports = app
