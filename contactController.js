@@ -42,6 +42,7 @@ res.json({
 };
 // Handle view contact info
 exports.view = function (req, res) {
+    console.log("HEllo!")
     Contact.find({name : req.params.name}, function (err, contacts) {
         if (err) {
             res.send(err);
