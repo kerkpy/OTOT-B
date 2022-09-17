@@ -59,8 +59,8 @@ jobs:
       with:
         aws_access_key: ${{secrets.AWS_ACCESS_KEY}}
         aws_secret_key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
-        application_name: "Contact Book"
-        environment_name: "Contactbook-env"
+        application_name: "contact"
+        environment_name: "Contact-env"
         region: "us-east-2"
         version_label: "app-${{ steps.format-time.outputs.replaced }}"
         deployment_package: deploy.zip
