@@ -63,16 +63,18 @@ exports.update = function (req, res) {
             return
         }
         else {
-            contact.gender = req.body.gender;
-            contact.email = req.body.email;
-            contact.phone = req.body.phone;
-            contact.save(function (err) {
- 
+
+            Contact.updateOne({
+                name: req.params.name,
+                gender : req.body.gender,
+                email : req.body.email,
+                phone: req.body.phone
+            }, function (err) {
                 res.json({
                     message: 'Contact Info updated',
                     data: contact
                 });
-            });
+            })
         }
     })
 };
