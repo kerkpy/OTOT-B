@@ -71,6 +71,10 @@ exports.update = function (req, res) {
                 email : req.body.email,
                 phone: req.body.phone
             }, function (err) {
+                contact.name =  req.params.name,
+                contact.gender = req.body.gender,
+                contact.email = req.body.email,
+                contact.phone = req.body.phone
                 res.json({
                     message: 'Contact Info updated',
                     data: contact
