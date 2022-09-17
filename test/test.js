@@ -1,6 +1,6 @@
 chai = require("chai")
 chaiHttp = require("chai-http")
-app = require("../index")
+app = require("../server")
 
 chai.use(chaiHttp)
 chai.should()
