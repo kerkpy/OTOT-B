@@ -37,6 +37,7 @@ jobs:
         envkey_DEBUG: false
         envkey_SOME_API_KEY: "123456abcdef"
         envkey_DB_URI: "mongodb://localhost:27017"
+    - run: npm install
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
