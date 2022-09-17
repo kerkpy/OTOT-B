@@ -25,6 +25,7 @@ exports.new = function (req, res) {
             message: 'Email and Phone should not be empty!',
             data: contact
         })
+        return
     } 
     contact.name = req.body.name ? req.body.name : contact.name;
     contact.gender = req.body.gender;
